@@ -1,0 +1,26 @@
+{
+  "name": "stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softroles/stats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/softroles/stats/issues"
+  },
+  "homepage": "https://github.com/softroles/stats#readme",
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "websocket": "^1.0.28"
+  }
+}

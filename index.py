@@ -16,11 +16,11 @@ while True:
         'users': []
     }
     for partition in psutil.disk_partitions():
-      try:
-        message['disks'].append(
-            {'drive': partition.device, 'usage': psutil.disk_usage(partition.device).percent})
-      except:
-        pass
+        try:
+            message['disks'].append(
+                {'drive': partition.device, 'usage': psutil.disk_usage(partition.device).percent})
+        except:
+            pass
 
     for user in psutil.users():
         now = datetime.timestamp(datetime.now())
@@ -28,4 +28,4 @@ while True:
         passed = now - userLogon
         message['users'].append(
             {'name': user.name, 'logon': datetime.fromtimestamp(passed).strftime("%H:%M:%S")})
-    print(str(json.dumps(message)))
+    print(str(json.dumps(message)), flush=True)
