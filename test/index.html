@@ -11,9 +11,9 @@
 <body>
 
   <script>
-    var socket = new WebSocket('ws://127.0.0.1')
+    var socket = new WebSocket('ws://127.0.0.1:5000')
     socket.onmessage = function (event) {
-      console.log(event)
+      // console.log(event)
       console.log(JSON.parse(event.data))
     }
   </script>

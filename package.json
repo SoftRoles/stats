@@ -21,6 +21,7 @@
   "homepage": "https://github.com/softroles/stats#readme",
   "dependencies": {
     "argparse": "^1.0.10",
-    "websocket": "^1.0.28"
+    "websocket": "^1.0.28",
+    "ws": "^6.1.3"
   }
 }
