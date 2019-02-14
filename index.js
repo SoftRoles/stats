@@ -22,13 +22,7 @@ const server = new websocket.Server({ port: Number(args.port) })
 server.on('connection', (client, req)=>{
   client.isAlive = true
   // client.spawn = spawn('python', ['index.py']);
-  // console.log(ws)
-  // server.clients.forEach(client=>{
-    // console.log(client)
-  // })
-  // console.log(server.clients)
-  // console.log(req.headers['x-forwarded-for'].split(/\s*,\s*/)[0])
-  console.log(req.connection.remoteAddress)
+  console.log((req.headers['x-forwarded-for'] && req.headers['x-forwarded-for'].split(/\s*,\s*/)[0]) || req.connection.remoteAddress)
 })
 
 //=============================================================================
